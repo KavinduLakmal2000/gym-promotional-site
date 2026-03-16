@@ -21,21 +21,6 @@ A responsive, modern promotional website for a fitness brand, showcasing gym ser
 - Smooth scrolling and section animations
 - Dark/Light color palette based on provided branding
 
-## Folder Structure
-gym-promotional-site/
-│
-├─ public/
-├─ src/
-│ ├─ assets/ # Images and logos
-│ ├─ components/ # Reusable React components
-│ ├─ pages/ # Page components
-│ ├─ App.jsx
-│ └─ main.jsx
-├─ tailwind.config.js
-├─ postcss.config.js
-├─ package.json
-└─ README.md
-
 ---
 
 ## Setup Instructions
@@ -72,7 +57,7 @@ https://www.figma.com/make/XEkUxocxyGGXa9wXayx36k/gym-promotional-site?t=KIPLaxH
 ```
 ----
 ## Author 
-Kavindu Lakmal
-Email: kavindulakmal2000@gmail.com
-GitHub: https://github.com/kavindulakmal2000
+- Kavindu Lakmal
+- Email: kavindulakmal2000@gmail.com
+- GitHub: https://github.com/kavindulakmal2000
 
