@@ -1,16 +1,78 @@
-# React + Vite
+# Gym Promotional Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+A responsive, modern promotional website for a fitness brand, showcasing gym services, membership plans, trainers, and allowing users to submit inquiries. Built with **React** and **Tailwind CSS** for a clean and professional design.
 
-Currently, two official plugins are available:
+## Tech Stack
+- React (Vite)
+- Tailwind CSS
+- JavaScript
+- HTML / CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- Fully responsive layout
+- Hero section with CTA buttons
+- About section describing the gym
+- Services / Features section with cards
+- Trainers section with interactive hover animations
+- Stats counter section for members, trainers, and programs
+- Animated progress bars for training expertise
+- Contact form with basic validation
+- Smooth scrolling and section animations
+- Dark/Light color palette based on provided branding
 
-## React Compiler
+## Folder Structure
+gym-promotional-site/
+│
+├─ public/
+├─ src/
+│ ├─ assets/ # Images and logos
+│ ├─ components/ # Reusable React components
+│ ├─ pages/ # Page components
+│ ├─ App.jsx
+│ └─ main.jsx
+├─ tailwind.config.js
+├─ postcss.config.js
+├─ package.json
+└─ README.md
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository
+```bash
+git clone https://github.com/kavindulakmal2000/gym-promotional-site.git
+cd gym-promotional-site
+```
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Run the development server
+```bash
+npm run dev
+```
+---
+## Deployment
+
+The project can be deployed on Netlify or Vercel. The live demo will be available here:
+```bash
+https://LiveDemoLink.com
+```
+
+---
+## Figma Design
+
+The UI/UX design was created in Figma using the provided branding assets
+
+```bash
+https://www.figma.com/make/XEkUxocxyGGXa9wXayx36k/gym-promotional-site?t=KIPLaxHv90VXFiBR-1
+```
+----
+## Author 
+Kavindu Lakmal
+Email: kavindulakmal2000@gmail.com
+GitHub: https://github.com/kavindulakmal2000
+
