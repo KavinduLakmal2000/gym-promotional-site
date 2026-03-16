@@ -43,18 +43,16 @@ npm run dev
 ## Deployment
 
 The project can be deployed on Netlify or Vercel. The live demo will be available here:
-```bash
-https://LiveDemoLink.com
-```
+
+[View Live Demo](https://gym-promotional-site.netlify.app/)
 
 ---
 ## Figma Design
 
 The UI/UX design was created in Figma using the provided branding assets
 
-```bash
-https://www.figma.com/make/XEkUxocxyGGXa9wXayx36k/gym-promotional-site?t=KIPLaxHv90VXFiBR-1
-```
+[View the UI/UX design in Figma](https://www.figma.com/make/XEkUxocxyGGXa9wXayx36k/gym-promotional-site?t=KIPLaxHv90VXFiBR-1)
+
 ----
 ## Author 
 - Kavindu Lakmal
