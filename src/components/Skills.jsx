@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { skills } from "../data/data";
 
 function SkillBar({ name, percentage, delay }) {
   const [width, setWidth] = useState(0);
@@ -57,13 +58,6 @@ function SkillBar({ name, percentage, delay }) {
 export function Skills() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const skills = [
-    { name: "Strength Training", percentage: 90 },
-    { name: "Cardio Fitness", percentage: 85 },
-    { name: "Nutrition Coaching", percentage: 75 },
-    { name: "Yoga & Flexibility", percentage: 80 },
-  ];
 
   const handleSmoothScroll = (targetId) => {
     const element = document.querySelector(targetId);

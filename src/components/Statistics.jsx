@@ -1,10 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { statistics } from "../data/data"; 
 
 function StatCard({ endValue, label, suffix = "", delay }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
 
   useEffect(() => {
     if (!isInView) return;
@@ -15,7 +17,7 @@ function StatCard({ endValue, label, suffix = "", delay }) {
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
+
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       setCount(Math.floor(easeOutQuart * endValue));
 
@@ -68,9 +70,9 @@ export function Statistics() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <StatCard endValue={500} label="Members" suffix="+" delay={0.2} />
-          <StatCard endValue={20} label="Professional Trainers" delay={0.4} />
-          <StatCard endValue={10} label="Training Programs" delay={0.6} />
+          <StatCard endValue={statistics[0].endValue} label="Members" suffix="+" delay={statistics[0].delay} />
+          <StatCard endValue={statistics[1].endValue} label="Professional Trainers" delay={statistics[1].delay} />
+          <StatCard endValue={statistics[2].endValue} label="Training Programs" delay={statistics[2].delay} />
         </div>
       </div>
     </section>

@@ -1,8 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import { trainers } from "../data/data"; // import from data.js
 
-function TrainerCard({ image, name, specialty, delay }) {
+function TrainerCard({ image, name, specialty, socials, delay }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -11,7 +12,6 @@ function TrainerCard({ image, name, specialty, delay }) {
       transition={{ duration: 0.6, delay }}
       className="group relative bg-[#2D2D2D] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
     >
-      {/* Image Container */}
       <div className="relative h-80 overflow-hidden">
         <motion.img
           whileHover={{ scale: 1.1 }}
@@ -22,7 +22,6 @@ function TrainerCard({ image, name, specialty, delay }) {
         />
         <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
 
-        {/* Social Icons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileHover={{ opacity: 1, y: 0 }}
@@ -30,21 +29,21 @@ function TrainerCard({ image, name, specialty, delay }) {
         >
           <motion.a
             whileHover={{ scale: 1.2, color: "#F4C430" }}
-            href="#"
+            href={socials.instagram}
             className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-[#F4C430] transition-colors"
           >
             <Instagram size={20} className="text-white" />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.2, color: "#F4C430" }}
-            href="#"
+            href={socials.facebook}
             className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-[#F4C430] transition-colors"
           >
             <Facebook size={20} className="text-white" />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.2, color: "#F4C430" }}
-            href="#"
+            href={socials.twitter}
             className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-[#F4C430] transition-colors"
           >
             <Twitter size={20} className="text-white" />
@@ -52,7 +51,6 @@ function TrainerCard({ image, name, specialty, delay }) {
         </motion.div>
       </div>
 
-      {/* Card Content */}
       <motion.div
         whileHover={{ borderColor: "#F4C430" }}
         className="p-6 border-2 border-transparent transition-colors duration-300"
@@ -61,7 +59,6 @@ function TrainerCard({ image, name, specialty, delay }) {
         <p className="text-[#F4C430] text-lg font-semibold">{specialty}</p>
       </motion.div>
 
-      {/* Golden border glow effect */}
       <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[#F4C430] group-hover:shadow-[0_0_20px_rgba(244,196,48,0.5)] transition-all duration-300 pointer-events-none"></div>
     </motion.div>
   );
@@ -70,29 +67,6 @@ function TrainerCard({ image, name, specialty, delay }) {
 export function Trainers() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const trainers = [
-    {
-      image: "/Trainers/t1.jpeg",
-      name: "Marcus Johnson",
-      specialty: "Strength Training",
-    },
-    {
-      image: "/Trainers/t2.jpeg",
-      name: "Sarah Williams",
-      specialty: "Personal Training",
-    },
-    {
-      image: "/Trainers/t3.jpeg",
-      name: "Emma Rodriguez",
-      specialty: "Yoga & Flexibility",
-    },
-    {
-      image: "/Trainers/t4.jpeg",
-      name: "David Chen",
-      specialty: "Cardio & Conditioning",
-    },
-  ];
 
   return (
     <section ref={ref} className="py-20 bg-black">

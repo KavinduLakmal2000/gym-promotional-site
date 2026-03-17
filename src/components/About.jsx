@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from 'react';
+import { aboutStats } from "../data/data";
 
 export function About() {
   const ref = useRef(null);
@@ -87,11 +88,7 @@ export function About() {
               variants={containerVariants}
               className="grid grid-cols-3 gap-6 mt-8"
             >
-              {[
-                { value: '500+', label: 'Members' },
-                { value: '20+', label: 'Trainers' },
-                { value: '10+', label: 'Years' },
-              ].map((stat, index) => (
+              {aboutStats.map((stat, index) => (
                 <motion.div
                   key={index}
                   variants={statsVariants}

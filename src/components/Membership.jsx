@@ -1,51 +1,11 @@
 import { Check } from 'lucide-react';
 import { motion, useInView } from "framer-motion";
 import { useRef } from 'react';
+import { plans } from '../data/data';
 
 export function Membership() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
-
-  const plans = [
-    {
-      name: 'Basic',
-      price: '$29',
-      period: '/month',
-      features: [
-        'Access to gym equipment',
-        'Locker room access',
-        'Open gym hours',
-        'Free fitness assessment',
-      ],
-      highlighted: false,
-    },
-    {
-      name: 'Premium',
-      price: '$59',
-      period: '/month',
-      features: [
-        'All Basic features',
-        'Unlimited group classes',
-        '2 personal training sessions',
-        'Nutrition consultation',
-        'Guest privileges',
-      ],
-      highlighted: true,
-    },
-    {
-      name: 'Elite',
-      price: '$99',
-      period: '/month',
-      features: [
-        'All Premium features',
-        'Unlimited personal training',
-        'Custom meal planning',
-        'Priority class booking',
-        'Sauna & spa access',
-      ],
-      highlighted: false,
-    },
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
