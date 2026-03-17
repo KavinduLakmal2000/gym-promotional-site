@@ -23,3 +23,26 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #F4C430;
 }
+
+/* hero bg setup */
+.hero-bg {
+  background-image: url('/bg/hero-bg.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+}
+
+/* Parallax Background Image */
+.Parallax-bg {
+  background-image: url('/bg/parallax-bg.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-bg {
+  background-image: url('/bg/about.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

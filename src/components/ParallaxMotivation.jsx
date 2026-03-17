@@ -15,17 +15,12 @@ export function ParallaxMotivation() {
       {/* Parallax Background Image */}
       <motion.div
         style={{ y }}
-        className="absolute inset-0 scale-110"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1739430548323-d3a55a714052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjB3b3Jrb3V0JTIwbW90aXZhdGlvbiUyMGludGVuc2V8ZW58MXx8fHwxNzczNjg2MDEzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Gym motivation"
-          className="w-full h-full object-cover"
-        />
+        className="absolute inset-0 scale-110 Parallax-bg">
+
         {/* Dark Gradient Overlay */}
         <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/60 to-black/70"></div>
       </motion.div>
-
+ 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
         <motion.h2

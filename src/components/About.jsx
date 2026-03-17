@@ -51,9 +51,7 @@ export function About() {
             <motion.img
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              src="https://images.unsplash.com/photo-1540206063137-4a88ca974d1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwdHJhaW5lciUyMHBlcnNvbmFsJTIwdHJhaW5pbmd8ZW58MXx8fHwxNzczNjgzMjczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Personal training session"
-              className="w-full h-125 object-cover rounded-lg shadow-2xl"
+              className="w-full h-125 object-cover rounded-lg shadow-2xl about-bg"
             />
           </motion.div>
 

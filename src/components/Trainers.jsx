@@ -73,22 +73,22 @@ export function Trainers() {
 
   const trainers = [
     {
-      image: "https://images.unsplash.com/photo-1740896601023-d5dec9ab491b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNjdWxhciUyMGZpdG5lc3MlMjB0cmFpbmVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzczNjg2MDExfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/Trainers/t1.jpeg",
       name: "Marcus Johnson",
       specialty: "Strength Training",
     },
     {
-      image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBwZXJzb25hbCUyMHRyYWluZXIlMjBmaXRuZXNzfGVufDF8fHx8MTc3MzY0MTgyNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/Trainers/t2.jpeg",
       name: "Sarah Williams",
       specialty: "Personal Training",
     },
     {
-      image: "https://images.unsplash.com/photo-1758599879643-08d912f3af15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwaW5zdHJ1Y3RvciUyMHN0cmV0Y2hpbmd8ZW58MXx8fHwxNzczNjg2MDExfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/Trainers/t3.jpeg",
       name: "Emma Rodriguez",
       specialty: "Yoga & Flexibility",
     },
     {
-      image: "https://images.unsplash.com/photo-1730732862473-dba100ea08b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJkaW8lMjBmaXRuZXNzJTIwY29hY2glMjBhdGhsZXRpY3xlbnwxfHx8fDE3NzM2ODYwMTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/Trainers/t4.jpeg",
       name: "David Chen",
       specialty: "Cardio & Conditioning",
     },

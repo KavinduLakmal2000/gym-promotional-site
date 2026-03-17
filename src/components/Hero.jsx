@@ -28,15 +28,10 @@ export function Hero() {
     >
       {/* Background Image with Parallax */}
       <motion.div
-        style={{ y }}
-        className="absolute inset-0 z-0 scale-110"
+        style={{ y }} // optional parallax effect
+        className="absolute inset-0 z-0 scale-110 hero-bg"
       >
-        <img
-          src="https://images.unsplash.com/photo-1526401485004-46910ecc8e51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBneW0lMjBlcXVpcG1lbnQlMjB3ZWlnaHRzfGVufDF8fHx8MTc3MzY4MzI3M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Modern gym equipment"
-          className="w-full h-full object-cover"
-        />
-        {/* Dark Gradient Overlay */}
+        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/70 to-black/50"></div>
       </motion.div>
 
