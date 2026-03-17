@@ -73,7 +73,7 @@ export function About() {
               variants={itemVariants}
               className="text-gray-300 text-lg mb-6 leading-relaxed"
             >
-              At FitGym, we believe fitness is more than just physical transformation—it's 
+              At Fitness Sports Center, we believe fitness is more than just physical transformation—it's 
               about building confidence, discipline, and a healthier lifestyle. Our 
               state-of-the-art facility is designed to support every step of your fitness journey.
             </motion.p>

@@ -42,7 +42,7 @@ export function Navigation() {
             className="shrink-0"
           >
             <div className="text-2xl font-bold text-[#F4C430]">
-              FIT<span className="text-white">GYM</span>
+              Fitness <span className="text-white">Sports</span>
             </div>
           </motion.div>
 

@@ -163,7 +163,7 @@ export function Contact() {
             <div className="space-y-6">
               {[
                 { icon: Phone, title: 'Phone', info: '+1 (555) 123-4567' },
-                { icon: Mail, title: 'Email', info: 'info@fitgym.com' },
+                { icon: Mail, title: 'Email', info: 'info@FitnessSportsCenter.com' },
                 { icon: MapPin, title: 'Address', info: '123 Fitness Street\nNew York, NY 10001' },
               ].map((contact, index) => {
                 const Icon = contact.icon;
