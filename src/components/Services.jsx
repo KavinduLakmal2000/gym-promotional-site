@@ -1,6 +1,6 @@
 import { Dumbbell, Heart, Apple, Users } from 'lucide-react';
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
+import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 export function Services() {

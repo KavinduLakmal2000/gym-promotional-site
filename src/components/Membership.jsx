@@ -1,6 +1,5 @@
 import { Check } from 'lucide-react';
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
+import { motion, useInView } from "framer-motion";
 import { useRef } from 'react';
 
 export function Membership() {

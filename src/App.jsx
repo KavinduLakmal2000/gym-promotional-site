@@ -1,11 +1,33 @@
-import './App.css'
+import './styles/App.css'
+
+import { Navigation } from './components/Navigation';
+import { Hero } from './components/Hero';
+import { About } from './components/About';
+import { Services } from './components/Services';
+import { Statistics } from './components/Statistics';
+import { ParallaxMotivation } from './components/ParallaxMotivation';
+import { Trainers } from './components/Trainers';
+import { Skills } from './components/Skills';
+import { Membership } from './components/Membership';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 
 function App() {
   
 
   return (
-    <div>
-      <h1 className='font-bold text-xl mb-2'>Test App</h1>
+    <div className="min-h-screen bg-black">
+      <Navigation />
+      <Hero />
+      <Statistics />
+      <About />
+      <Services />
+      <ParallaxMotivation />
+      <Trainers />
+      <Skills />
+      <Membership />
+      <Contact />
+      <Footer />
     </div>
   )
 }

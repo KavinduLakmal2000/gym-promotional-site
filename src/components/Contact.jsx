@@ -1,6 +1,5 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
+import { motion, useInView } from "framer-motion";
 import { useRef, useState } from 'react';
 
 export function Contact() {
