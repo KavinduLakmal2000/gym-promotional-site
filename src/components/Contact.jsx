@@ -2,6 +2,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from 'react';
 import Swal from 'sweetalert2';
+import { contactInfo, openingHours } from '../data/data';
 
 export function Contact() {
   const ref = useRef(null);
@@ -17,6 +18,12 @@ export function Contact() {
         staggerChildren: 0.15,
       },
     },
+  };
+
+  const iconMap = {
+    phone: Phone,
+    email: Mail,
+    address: MapPin,
   };
 
   const itemVariants = {
@@ -174,12 +181,8 @@ export function Contact() {
             </div>
 
             <div className="space-y-6">
-              {[
-                { icon: Phone, title: 'Phone', info: '+1 (555) 123-4567' },
-                { icon: Mail, title: 'Email', info: 'info@FitnessSportsCenter.com' },
-                { icon: MapPin, title: 'Address', info: '123 Fitness Street\nNew York, NY 10001' },
-              ].map((contact, index) => {
-                const Icon = contact.icon;
+              {contactInfo.map((contact, index) => {
+                const Icon = iconMap[contact.type];
                 return (
                   <motion.div
                     key={index}
@@ -218,14 +221,12 @@ export function Contact() {
             >
               <h4 className="text-white font-bold mb-3">Opening Hours</h4>
               <div className="space-y-2 text-gray-400">
-                <div className="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span className="text-[#F4C430]">5:00 AM - 11:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday - Sunday</span>
-                  <span className="text-[#F4C430]">7:00 AM - 9:00 PM</span>
-                </div>
+                {openingHours.map((item, index) => (
+                  <div key={index} className="flex justify-between">
+                    <span>{item.day}</span>
+                    <span className="text-[#F4C430]">{item.time}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
 

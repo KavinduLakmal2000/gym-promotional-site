@@ -53,9 +53,9 @@ export const statistics = [
 // about stats data
 
 export const aboutStats = [
-  { value: '500+', label: 'Members' },
-  { value: '20+', label: 'Trainers' },
-  { value: '10+', label: 'Years' },
+    { value: '500+', label: 'Members' },
+    { value: '20+', label: 'Trainers' },
+    { value: '10+', label: 'Years' },
 ];
 
 // skills data
@@ -71,41 +71,72 @@ export const skills = [
 
 export const plans = [
     {
-      name: 'Basic',
-      price: '$29',
-      period: '/month',
-      features: [
-        'Access to gym equipment',
-        'Locker room access',
-        'Open gym hours',
-        'Free fitness assessment',
-      ],
-      highlighted: false,
+        name: 'Basic',
+        price: 'Rs.6,999',
+        period: '/month',
+        features: [
+            'Access to gym equipment',
+            'Locker room access',
+            'Open gym hours',
+            'Free fitness assessment',
+        ],
+        highlighted: false,
     },
     {
-      name: 'Premium',
-      price: '$59',
-      period: '/month',
-      features: [
-        'All Basic features',
-        'Unlimited group classes',
-        '2 personal training sessions',
-        'Nutrition consultation',
-        'Guest privileges',
-      ],
-      highlighted: true,
+        name: 'Premium',
+        price: 'Rs.12,999',
+        period: '/month',
+        features: [
+            'All Basic features',
+            'Unlimited group classes',
+            '2 personal training sessions',
+            'Nutrition consultation',
+            'Guest privileges',
+        ],
+        highlighted: true,
     },
     {
-      name: 'Elite',
-      price: '$99',
-      period: '/month',
-      features: [
-        'All Premium features',
-        'Unlimited personal training',
-        'Custom meal planning',
-        'Priority class booking',
-        'Sauna & spa access',
-      ],
-      highlighted: false,
+        name: 'Elite',
+        price: 'Rs.19,999',
+        period: '/month',
+        features: [
+            'All Premium features',
+            'Unlimited personal training',
+            'Custom meal planning',
+            'Priority class booking',
+            'Sauna & spa access',
+        ],
+        highlighted: false,
     },
-  ];
+];
+
+// contact info data
+
+export const contactInfo = [
+    {
+        type: 'phone',
+        title: 'Phone',
+        info: '+94 123 456-789',
+    },
+    {
+        type: 'email',
+        title: 'Email',
+        info: 'info@FitnessSportsCenter.com',
+    },
+    {
+        type: 'address',
+        title: 'Address',
+        info: 'No. 320, D.R. Wijewardane Mawatha, Colombo 10, Sri Lanka',
+    },
+];
+
+export const openingHours = [
+    {
+        day: 'Monday - Friday',
+        time: '5:00 AM - 11:00 PM',
+    },
+    {
+        day: 'Saturday - Sunday',
+        time: '7:00 AM - 9:00 PM',
+    },
+];
