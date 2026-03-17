@@ -28,19 +28,26 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b transition-all duration-300 ${
-        isScrolled ? 'bg-black/95 border-[#2D2D2D] shadow-lg' : 'bg-black/80 border-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b transition-all duration-300 ${isScrolled ? 'bg-black/95 border-[#2D2D2D] shadow-lg' : 'bg-black/80 border-transparent'
+        }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="shrink-0"
+            className="shrink-0 flex items-center space-x-2"
           >
+            {/* Logo Image */}
+            <img
+              src="/logo.png"     
+              alt="Logo"
+              className="h-20 w-20 object-contain"
+            />
+
+            {/* Text */}
             <div className="text-2xl font-bold text-[#F4C430]">
               Fitness <span className="text-white">Sports</span>
             </div>
