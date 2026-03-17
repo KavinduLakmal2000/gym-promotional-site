@@ -38,7 +38,8 @@ export function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="shrink-0 flex items-center space-x-2"
+            className="shrink-0 flex items-center space-x-2 cursor-pointer"
+            onClick={(e) => handleSmoothScroll(e, '#home')}
           >
             {/* Logo Image */}
             <img
@@ -75,6 +76,7 @@ export function Navigation() {
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={(e) => handleSmoothScroll(e, '#contact')}
               className="bg-[#F4C430] text-black px-6 py-2.5 rounded-md hover:bg-[#E5B520] transition-colors shadow-lg hover:shadow-[#F4C430]/50"
             >
               Join Now
@@ -110,7 +112,9 @@ export function Navigation() {
                 {item}
               </a>
             ))}
-            <button className="w-full bg-[#F4C430] text-black px-6 py-2.5 rounded-md hover:bg-[#E5B520] transition-colors">
+            <button 
+             onClick={(e) => handleSmoothScroll(e, '#contact')}
+            className="w-full bg-[#F4C430] text-black px-6 py-2.5 rounded-md hover:bg-[#E5B520] transition-colors">
               Join Now
             </button>
           </motion.div>

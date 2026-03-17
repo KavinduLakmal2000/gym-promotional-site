@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from 'react';
+import Swal from 'sweetalert2';
 
 export function Contact() {
   const ref = useRef(null);
@@ -39,7 +40,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-20 bg-black" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <motion.div
           variants={headerVariants}
@@ -62,14 +63,14 @@ export function Contact() {
           animate={isInView ? 'visible' : 'hidden'}
           className="grid md:grid-cols-2 gap-12"
         >
-          
+
           {/* Contact Form */}
           <motion.div
             variants={itemVariants}
             className="bg-[#2D2D2D] p-8 rounded-lg border border-[#404040]"
           >
             <form className="space-y-6">
-              
+
               <div>
                 <label htmlFor="name" className="block text-white mb-2">
                   Name
@@ -134,12 +135,24 @@ export function Contact() {
               </div>
 
               <motion.button
-                type="submit"
+                type="button"
                 whileHover={{
                   scale: 1.02,
                   boxShadow: '0 0 25px rgba(244, 196, 48, 0.5)',
                 }}
                 whileTap={{ scale: 0.98 }}
+                onClick={() => {
+                  Swal.fire({
+                    title: 'Message Sent!',
+                    text: 'Your message has been successfully sent.',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    background: '#1F1F1F', // dark background
+                    color: '#FFFFFF',       // text color
+                    iconColor: '#F4C430',   // icon color
+                    confirmButtonColor: '#F4C430',
+                  });
+                }}
                 className="w-full bg-[#F4C430] text-black py-3 rounded-md hover:bg-[#E5B520] transition-all font-bold"
               >
                 Send Message
@@ -150,7 +163,7 @@ export function Contact() {
 
           {/* Contact Info */}
           <motion.div variants={itemVariants} className="space-y-8">
-            
+
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">
                 Contact Information

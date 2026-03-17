@@ -28,7 +28,7 @@ function SkillBar({ name, percentage, delay }) {
         <span className="text-lg font-semibold text-white">{name}</span>
         <span className="text-[#F4C430] font-bold text-lg">{percentage}%</span>
       </div>
-      
+
       <div className="w-full h-3 bg-gray-700 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
@@ -65,6 +65,13 @@ export function Skills() {
     { name: "Yoga & Flexibility", percentage: 80 },
   ];
 
+  const handleSmoothScroll = (targetId) => {
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section ref={ref} className="py-20 bg-[#2A1810]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,6 +95,7 @@ export function Skills() {
                 boxShadow: "0 0 25px rgba(244, 196, 48, 0.6)",
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => handleSmoothScroll('#services')}
               className="bg-[#F4C430] text-black px-8 py-4 rounded-md text-lg font-semibold hover:bg-[#E5B520] transition-all shadow-lg"
             >
               Explore Programs

@@ -21,6 +21,13 @@ export function Hero() {
     return () => clearInterval(typingInterval);
   }, []);
 
+  const handleSmoothScroll = (targetId) => {
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -88,6 +95,7 @@ export function Hero() {
                 boxShadow: "0 0 25px rgba(244, 196, 48, 0.6)",
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => handleSmoothScroll('#contact')} 
               className="bg-[#F4C430] text-black px-8 py-4 rounded-md text-lg hover:bg-[#E5B520] transition-all shadow-lg"
             >
               Join Now
@@ -99,6 +107,7 @@ export function Hero() {
                 color: "white",
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => handleSmoothScroll('#services')}
               className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-md text-lg hover:bg-white hover:text-black transition-all"
             >
               View Programs

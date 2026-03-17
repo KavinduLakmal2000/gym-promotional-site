@@ -8,6 +8,13 @@ export function ParallaxMotivation() {
     offset: ["start end", "end start"],
   });
 
+  const handleSmoothScroll = (targetId) => {
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
   return (
@@ -53,6 +60,7 @@ export function ParallaxMotivation() {
             boxShadow: "0 0 30px rgba(244, 196, 48, 0.7)",
           }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => handleSmoothScroll('#contact')} 
           className="bg-[#F4C430] text-black px-10 py-5 rounded-md text-xl font-semibold hover:bg-[#E5B520] transition-all shadow-lg"
         >
           Start Training Today
