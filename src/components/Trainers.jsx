@@ -1,8 +1,7 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Facebook, Instagram, Twitter } from "lucide-react";
-import { trainers } from "../data/data"; // import from data.js
-
+import { trainers } from "../data/data";
 function TrainerCard({ image, name, specialty, socials, delay }) {
   return (
     <motion.div
@@ -67,10 +66,43 @@ function TrainerCard({ image, name, specialty, socials, delay }) {
 export function Trainers() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [filter, setFilter] = useState("all");
+
+  // ✅ Filter logic
+  const filteredTrainers =
+    filter === "all"
+      ? trainers
+      : trainers.filter((t) => t.category === filter);
 
   return (
     <section ref={ref} className="py-20 bg-black">
+
+      {/* ✅ Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {[
+          { label: "All", value: "all" },
+          { label: "Strength Training", value: "strength" },
+          { label: "Personal Training", value: "personal" },
+          { label: "Yoga & Flexibility", value: "yoga" },
+          { label: "Cardio & Conditioning", value: "cardio" },
+        ].map((btn) => (
+          <button
+            key={btn.value}
+            onClick={() => setFilter(btn.value)}
+            className={`px-5 py-2 rounded-full font-semibold transition-all duration-300
+              ${filter === btn.value
+                ? "bg-[#F4C430] text-black scale-105"
+                : "bg-[#2D2D2D] text-white hover:bg-[#F4C430] hover:text-black"
+              }`}
+          >
+            {btn.label}
+          </button>
+        ))}
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -85,15 +117,28 @@ export function Trainers() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {trainers.map((trainer, index) => (
-            <TrainerCard
+        {/* ✅ Animated Grid */}
+        <motion.div
+          layout   // 🔥 enables smooth reflow animation
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          {filteredTrainers.map((trainer, index) => (
+            <motion.div
               key={trainer.name}
-              {...trainer}
-              delay={index * 0.15}
-            />
+              layout   // 🔥 each item animates position change
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.4 }}
+            >
+              <TrainerCard
+                {...trainer}
+                delay={index * 0.1}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
+
       </div>
     </section>
   );

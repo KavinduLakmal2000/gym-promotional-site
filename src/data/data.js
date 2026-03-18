@@ -4,6 +4,7 @@ export const trainers = [
         image: "/Trainers/t1.jpeg",
         name: "Marcus Johnson",
         specialty: "Strength Training",
+        category: "strength",
         socials: {
             instagram: "#",
             facebook: "#",
@@ -14,6 +15,7 @@ export const trainers = [
         image: "/Trainers/t2.jpeg",
         name: "Sarah Williams",
         specialty: "Personal Training",
+        category: "personal",
         socials: {
             instagram: "#",
             facebook: "#",
@@ -24,6 +26,7 @@ export const trainers = [
         image: "/Trainers/t3.jpeg",
         name: "Emma Rodriguez",
         specialty: "Yoga & Flexibility",
+        category: "yoga",
         socials: {
             instagram: "#",
             facebook: "#",
@@ -34,6 +37,7 @@ export const trainers = [
         image: "/Trainers/t4.jpeg",
         name: "David Chen",
         specialty: "Cardio & Conditioning",
+        category: "cardio",
         socials: {
             instagram: "#",
             facebook: "#",
