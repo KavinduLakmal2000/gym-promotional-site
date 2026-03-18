@@ -1,7 +1,7 @@
 //trainers data
 export const trainers = [
     {
-        image: "/Trainers/t1.jpeg",
+        image: "/gym-promotional-site/Trainers/t1.jpeg",
         name: "Marcus Johnson",
         specialty: "Strength Training",
         category: "strength",
@@ -12,7 +12,7 @@ export const trainers = [
         },
     },
     {
-        image: "/Trainers/t2.jpeg",
+        image: "/gym-promotional-site/Trainers/t2.jpeg",
         name: "Sarah Williams",
         specialty: "Personal Training",
         category: "personal",
@@ -23,7 +23,7 @@ export const trainers = [
         },
     },
     {
-        image: "/Trainers/t3.jpeg",
+        image: "/gym-promotional-site/Trainers/t3.jpeg",
         name: "Emma Rodriguez",
         specialty: "Yoga & Flexibility",
         category: "yoga",
@@ -34,7 +34,7 @@ export const trainers = [
         },
     },
     {
-        image: "/Trainers/t4.jpeg",
+        image: "/gym-promotional-site/Trainers/t4.jpeg",
         name: "David Chen",
         specialty: "Cardio & Conditioning",
         category: "cardio",

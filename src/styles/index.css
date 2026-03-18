@@ -40,9 +40,11 @@ html {
   background-repeat: no-repeat;
 }
 
+/* About Background Image */
 .about-bg {
   background-image: url('/bg/about.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
