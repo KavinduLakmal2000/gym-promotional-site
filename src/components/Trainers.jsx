@@ -68,7 +68,6 @@ export function Trainers() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [filter, setFilter] = useState("all");
 
-  // ✅ Filter logic
   const filteredTrainers =
     filter === "all"
       ? trainers
@@ -77,7 +76,7 @@ export function Trainers() {
   return (
     <section ref={ref} className="py-20 bg-black">
 
-      {/* ✅ Filter Buttons */}
+      {/* Filter Buttons */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         {[
           { label: "All", value: "all" },
@@ -117,15 +116,15 @@ export function Trainers() {
           </p>
         </motion.div>
 
-        {/* ✅ Animated Grid */}
+        {/*Animated Grid */}
         <motion.div
-          layout   // 🔥 enables smooth reflow animation
+          layout   //enables smooth reflow animation
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {filteredTrainers.map((trainer, index) => (
             <motion.div
               key={trainer.name}
-              layout   // 🔥 each item animates position change
+              layout   // each item animates position change
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}

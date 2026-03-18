@@ -12,7 +12,7 @@ function StatCard({ endValue, label, suffix = "", delay }) {
     if (!isInView) return;
 
     let startTime = null;
-    const duration = 2000; // 2 seconds
+    const duration = 2000;
 
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;

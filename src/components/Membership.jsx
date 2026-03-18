@@ -81,8 +81,8 @@ export function Membership() {
           {plans.map((plan, idx) => (
             <motion.div
               key={idx}
-              variants={cardVariants}          // apply the child animation
-              whileHover={{ y: -10 }}          // keep hover effect
+              variants={cardVariants}          
+              whileHover={{ y: -10 }}          
               className={`rounded-lg p-8 transition-all duration-300 ${plan.highlighted
                   ? "bg-[#2D2D2D] border-2 border-[#F4C430] shadow-2xl shadow-[#F4C430]/30 scale-105"
                   : "bg-[#1F1F1F] border border-[#404040] hover:border-[#F4C430]/50"
