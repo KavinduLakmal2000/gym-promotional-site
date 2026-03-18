@@ -10,6 +10,9 @@ export function Contact() {
 
   const [focusedInput, setFocusedInput] = useState(null);
 
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -42,6 +45,77 @@ export function Contact() {
       y: 0,
       transition: { duration: 0.6, ease: 'easeOut' },
     },
+  };
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const validate = () => {
+    let newErrors = {};
+
+    if (!formData.name) newErrors.name = "Name is required";
+    if (!formData.email) newErrors.email = "Email is required";
+    if (!/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Invalid email";
+    if (!formData.message) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+
+    // Live validation
+    let errorMsg = "";
+
+    if (id === "name" && !value) errorMsg = "Name is required";
+    if (id === "email") {
+      if (!value) errorMsg = "Email is required";
+      else if (!/\S+@\S+\.\S+/.test(value)) errorMsg = "Invalid email";
+    }
+    if (id === "message" && !value) errorMsg = "Message is required";
+
+    setErrors((prev) => ({
+      ...prev,
+      [id]: errorMsg,
+    }));
+  };
+
+  const handleSubmit = () => {
+    if (!validate()) return;
+
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+
+      Swal.fire({
+        title: 'Message Sent!',
+        text: 'Your message has been successfully sent.',
+        icon: 'success',
+        background: '#1F1F1F',
+        color: '#FFFFFF',
+        iconColor: '#F4C430',
+        confirmButtonColor: '#F4C430',
+      });
+
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+
+      setErrors({});
+    }, 1000);
   };
 
   return (
@@ -85,18 +159,28 @@ export function Contact() {
                 <motion.input
                   type="text"
                   id="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   onFocus={() => setFocusedInput('name')}
                   onBlur={() => setFocusedInput(null)}
                   animate={{
-                    borderColor: focusedInput === 'name' ? '#F4C430' : '#404040',
+                    borderColor: errors.name
+                      ? '#EF4444'
+                      : focusedInput === 'name'
+                        ? '#F4C430'
+                        : '#404040',
                     boxShadow: focusedInput === 'name'
                       ? '0 0 15px rgba(244, 196, 48, 0.3)'
-                      : '0 0 0 rgba(244, 196, 48, 0)',
+                      : '0 0 0 rgba(0,0,0,0)',
                   }}
-                  transition={{ duration: 0.3 }}
-                  className="w-full px-4 py-3 bg-[#1F1F1F] border rounded-md text-white focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-[#1F1F1F] border rounded-md text-white"
                   placeholder="Your name"
                 />
+
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                )}
+
               </div>
 
               <div>
@@ -106,18 +190,24 @@ export function Contact() {
                 <motion.input
                   type="email"
                   id="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   onFocus={() => setFocusedInput('email')}
                   onBlur={() => setFocusedInput(null)}
                   animate={{
-                    borderColor: focusedInput === 'email' ? '#F4C430' : '#404040',
-                    boxShadow: focusedInput === 'email'
-                      ? '0 0 15px rgba(244, 196, 48, 0.3)'
-                      : '0 0 0 rgba(244, 196, 48, 0)',
+                    borderColor: errors.email
+                      ? '#EF4444'
+                      : focusedInput === 'email'
+                        ? '#F4C430'
+                        : '#404040',
                   }}
-                  transition={{ duration: 0.3 }}
-                  className="w-full px-4 py-3 bg-[#1F1F1F] border rounded-md text-white focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-[#1F1F1F] border rounded-md text-white"
                   placeholder="your.email@example.com"
                 />
+
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                )}
               </div>
 
               <div>
@@ -127,42 +217,35 @@ export function Contact() {
                 <motion.textarea
                   id="message"
                   rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
                   onFocus={() => setFocusedInput('message')}
                   onBlur={() => setFocusedInput(null)}
                   animate={{
-                    borderColor: focusedInput === 'message' ? '#F4C430' : '#404040',
-                    boxShadow: focusedInput === 'message'
-                      ? '0 0 15px rgba(244, 196, 48, 0.3)'
-                      : '0 0 0 rgba(244, 196, 48, 0)',
+                    borderColor: errors.message
+                      ? '#EF4444'
+                      : focusedInput === 'message'
+                        ? '#F4C430'
+                        : '#404040',
                   }}
-                  transition={{ duration: 0.3 }}
-                  className="w-full px-4 py-3 bg-[#1F1F1F] border rounded-md text-white focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-[#1F1F1F] border rounded-md text-white resize-none"
                   placeholder="Tell us about your fitness goals..."
                 />
+
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                )}
               </div>
 
               <motion.button
                 type="button"
-                whileHover={{
-                  scale: 1.02,
-                  boxShadow: '0 0 25px rgba(244, 196, 48, 0.5)',
-                }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => {
-                  Swal.fire({
-                    title: 'Message Sent!',
-                    text: 'Your message has been successfully sent.',
-                    icon: 'success',
-                    confirmButtonText: 'OK',
-                    background: '#1F1F1F', // dark background
-                    color: '#FFFFFF',       // text color
-                    iconColor: '#F4C430',   // icon color
-                    confirmButtonColor: '#F4C430',
-                  });
-                }}
-                className="w-full bg-[#F4C430] text-black py-3 rounded-md hover:bg-[#E5B520] transition-all font-bold"
+                disabled={loading}
+                whileHover={{ scale: loading ? 1 : 1.02 }}
+                whileTap={{ scale: loading ? 1 : 0.98 }}
+                onClick={handleSubmit}
+                className="w-full bg-[#F4C430] text-black py-3 rounded-md font-bold"
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </motion.button>
 
             </form>
