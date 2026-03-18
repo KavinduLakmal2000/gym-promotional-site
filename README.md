@@ -14,12 +14,17 @@ A responsive, modern promotional website for a fitness brand, showcasing gym ser
 - Hero section with CTA buttons
 - About section describing the gym
 - Services / Features section with cards
-- Trainers section with interactive hover animations
-- Stats counter section for members, trainers, and programs
+- Trainer filtering functionality 
 - Animated progress bars for training expertise
-- Contact form with basic validation
-- Smooth scrolling and section animations
-- Dark/Light color palette based on provided branding
+- Contact form with advance validation
+- Smooth scrolling and section animations using Framer Motion
+- Dark mode UI
+- Dynamic data loading using JSON (API simulation)
+- Form validation with user feedback
+
+---
+## API Integration
+Membership plans and data are loaded dynamically from local JSON files using fetch API to simulate backend integration.
 
 ---
 
@@ -59,3 +64,7 @@ The UI/UX design was created in Figma using the provided branding assets
 - Email: kavindulakmal2000@gmail.com
 - GitHub: https://github.com/kavindulakmal2000
 
+---
+## Screenshots
+![Mobile view](./screenshots/mobile-screenshot.jpeg)
+![Desktop view](./screenshots/desktop-screenshot.png)
