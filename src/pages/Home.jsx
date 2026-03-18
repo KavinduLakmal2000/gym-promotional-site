@@ -9,6 +9,7 @@ import { Skills } from '../components/Skills';
 import { Membership } from '../components/Membership';
 import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
+import BackToTop from '../components/BackToTop';
 
 function Home() {
   return (
@@ -24,6 +25,7 @@ function Home() {
       <Membership />
       <Contact />
       <Footer />
+      <BackToTop />
     </div>
   )
 }

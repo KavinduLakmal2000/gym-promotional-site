@@ -71,49 +71,6 @@ export const skills = [
     { name: "Yoga & Flexibility", percentage: 80 },
 ];
 
-// membership plans data
-
-export const plans = [
-    {
-        name: 'Basic',
-        price: 'Rs.6,999',
-        period: '/month',
-        features: [
-            'Access to gym equipment',
-            'Locker room access',
-            'Open gym hours',
-            'Free fitness assessment',
-        ],
-        highlighted: false,
-    },
-    {
-        name: 'Premium',
-        price: 'Rs.12,999',
-        period: '/month',
-        features: [
-            'All Basic features',
-            'Unlimited group classes',
-            '2 personal training sessions',
-            'Nutrition consultation',
-            'Guest privileges',
-        ],
-        highlighted: true,
-    },
-    {
-        name: 'Elite',
-        price: 'Rs.19,999',
-        period: '/month',
-        features: [
-            'All Premium features',
-            'Unlimited personal training',
-            'Custom meal planning',
-            'Priority class booking',
-            'Sauna & spa access',
-        ],
-        highlighted: false,
-    },
-];
-
 // contact info data
 
 export const contactInfo = [

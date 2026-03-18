@@ -42,9 +42,16 @@ export function Footer() {
           className="grid md:grid-cols-4 gap-8 mb-8"
         >
           {/* Logo and Description */}
-          <motion.div variants={itemVariants} className="md:col-span-2">
+          <motion.div variants={itemVariants} className="md:col-span-2 ">
+            <div className="flex items-center space-x-2">
+            <img
+              src="/logo.png"     
+              alt="Logo"
+              className="h-20 w-20 object-contain"
+            />
             <div className="text-2xl font-bold text-[#F4C430] mb-4">
-              FIT<span className="text-white">GYM</span>
+              FITNESS <span className="text-white">SPORT</span>
+            </div>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Transform your body and mind with our world-class fitness programs, 

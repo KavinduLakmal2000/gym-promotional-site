@@ -50,7 +50,7 @@ export function Navigation() {
 
             {/* Text */}
             <div className="text-2xl font-bold text-[#F4C430]">
-              Fitness <span className="text-white">Sports</span>
+              FITNESS <span className="text-white">SPORT</span>
             </div>
           </motion.div>
 
