@@ -44,7 +44,7 @@ npm run dev
 
 The project can be deployed on Netlify or Vercel. The live demo will be available here:
 
-[View Live Demo](https://gym-promotional-site.netlify.app/)
+[View Live Demo](https://kavindulakmal2000.github.io/gym-promotional-site/)
 
 ---
 ## Figma Design
