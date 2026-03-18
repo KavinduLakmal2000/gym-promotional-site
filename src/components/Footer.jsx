@@ -54,8 +54,8 @@ export function Footer() {
             </div>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Transform your body and mind with our world-class fitness programs, 
-              expert trainers, and state-of-the-art facilities.
+              Transform your body and mind with our world class fitness programs, 
+              expert trainers, and state of the art facilities.
             </p>
             <div className="flex space-x-4">
               {socialIcons.map(({ Icon, href }, index) => (

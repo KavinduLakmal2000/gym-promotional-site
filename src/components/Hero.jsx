@@ -79,7 +79,7 @@ export function Hero() {
             className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl"
           >
             Unlock your full potential with expert training,
-            state-of-the-art equipment, and a supportive
+            state of the art equipment, and a supportive
             community dedicated to your fitness journey.
           </motion.p>
 
