@@ -74,7 +74,7 @@ export function Trainers() {
       : trainers.filter((t) => t.category === filter);
 
   return (
-    <section ref={ref} className="py-20 bg-black">
+    <section id="trainers" ref={ref} className="py-20 bg-black">
 
       {/* Filter Buttons */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">

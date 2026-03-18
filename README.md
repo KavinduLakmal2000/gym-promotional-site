@@ -67,4 +67,6 @@ The UI/UX design was created in Figma using the provided branding assets
 ---
 ## Screenshots
 ![Mobile view](./screenshots/mobile-screenshot.jpeg)
+
+---
 ![Desktop view](./screenshots/desktop-screenshot.png)

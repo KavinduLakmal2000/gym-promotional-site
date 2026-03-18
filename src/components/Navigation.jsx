@@ -23,6 +23,8 @@ export function Navigation() {
     }
   };
 
+  const menuItems = ['Home', 'About', 'Services', 'Trainers', 'Contact'];
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -43,7 +45,7 @@ export function Navigation() {
           >
             {/* Logo Image */}
             <img
-              src="/gym-promotional-site/logo/logo.png"     
+              src="/gym-promotional-site/logo/logo.png"
               alt="Logo"
               className="h-20 w-20 object-contain"
             />
@@ -56,7 +58,7 @@ export function Navigation() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
+            {menuItems.map((item, index) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -70,6 +72,7 @@ export function Navigation() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#F4C430] group-hover:w-full transition-all duration-300"></span>
               </motion.a>
             ))}
+
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -102,7 +105,7 @@ export function Navigation() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden pb-6 space-y-4"
           >
-            {['Home', 'About', 'Services', 'Contact'].map((item) => (
+            {menuItems.map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -112,9 +115,11 @@ export function Navigation() {
                 {item}
               </a>
             ))}
-            <button 
-             onClick={(e) => handleSmoothScroll(e, '#contact')}
-            className="w-full bg-[#F4C430] text-black px-6 py-2.5 rounded-md hover:bg-[#E5B520] transition-colors">
+
+            <button
+              onClick={(e) => handleSmoothScroll(e, '#contact')}
+              className="w-full bg-[#F4C430] text-black px-6 py-2.5 rounded-md hover:bg-[#E5B520] transition-colors"
+            >
               Join Now
             </button>
           </motion.div>

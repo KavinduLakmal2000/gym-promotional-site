@@ -53,7 +53,7 @@ export function Membership() {
   };
 
   return (
-    <section className="py-20 bg-[#2A1810]" ref={ref}>
+    <section id="membership" className="py-20 bg-[#2A1810]" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={headerVariants}
